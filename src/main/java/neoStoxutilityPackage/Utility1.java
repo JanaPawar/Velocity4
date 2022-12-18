@@ -17,6 +17,7 @@ public class Utility1 {
 	public static String readDataFromPropertyFile(String key) throws IOException
 	{
 		//create object of Properties class
+		
 		Properties prop=new Properties();
 		//create object of FileInputStream
 		FileInputStream myFile=new FileInputStream("C:\\Users\\HP\\eclipse-workspace\\NeoStox\\Neo.properties");
@@ -26,6 +27,8 @@ public class Utility1 {
 		return value;		
 	}
 	
+	
+	
 	public static void takeScreenshot(WebDriver driver,String fileName) throws IOException
 	{
 		File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -33,6 +36,7 @@ public class Utility1 {
 		FileHandler.copy(source, dest);
 	//	Reporter.log("taking screenshot ",true);
 	}
+	//
 	
 	public static void wait(WebDriver driver,int time)
 	{
@@ -40,5 +44,6 @@ public class Utility1 {
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(time));
 	//	Reporter.log("waiting for "+time+"milis",true);
 	}
+	//
 
 }
