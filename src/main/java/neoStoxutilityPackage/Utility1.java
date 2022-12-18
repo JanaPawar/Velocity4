@@ -27,8 +27,6 @@ public class Utility1 {
 		return value;		
 	}
 	
-	
-	
 	public static void takeScreenshot(WebDriver driver,String fileName) throws IOException
 	{
 		File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -36,7 +34,6 @@ public class Utility1 {
 		FileHandler.copy(source, dest);
 	//	Reporter.log("taking screenshot ",true);
 	}
-	//
 	
 	public static void wait(WebDriver driver,int time)
 	{
@@ -44,6 +41,6 @@ public class Utility1 {
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(time));
 	//	Reporter.log("waiting for "+time+"milis",true);
 	}
-	//
+	
 
 }
